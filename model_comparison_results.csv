@@ -1,0 +1,11 @@
+model_id,scaler,architecture,test_mae,test_r2,exact_matches,close_matches_1,close_matches_5,model_file
+QuantileTransformer_AttentionNet_WD2e-3,QuantileTransformer,AttentionNet_WD2e-3,57.353084564208984,0.9760023355484009,0,5,12,QuantileTransformer_AttentionNet_WD2e-3_best.pth
+QuantileTransformer_MegaWideDeep_WD5e-3,QuantileTransformer,MegaWideDeep_WD5e-3,62.21876907348633,0.9746615886688232,0,2,14,QuantileTransformer_MegaWideDeep_WD5e-3_best.pth
+RobustScaler_UltraResNet_WD1e-3,RobustScaler,UltraResNet_WD1e-3,64.59591674804688,0.9705533981323242,0,1,13,RobustScaler_UltraResNet_WD1e-3_best.pth
+RobustScaler_MegaWideDeep_WD5e-3,RobustScaler,MegaWideDeep_WD5e-3,65.08708190917969,0.9718051552772522,0,4,11,RobustScaler_MegaWideDeep_WD5e-3_best.pth
+RobustScaler_AttentionNet_WD2e-3,RobustScaler,AttentionNet_WD2e-3,68.37336730957031,0.9696197509765625,0,1,7,RobustScaler_AttentionNet_WD2e-3_best.pth
+QuantileTransformer_UltraDeep_WD1e-2,QuantileTransformer,UltraDeep_WD1e-2,69.15101623535156,0.9663897156715393,0,3,12,QuantileTransformer_UltraDeep_WD1e-2_best.pth
+RobustScaler_UltraDeep_WD1e-2,RobustScaler,UltraDeep_WD1e-2,70.53887939453125,0.9656245112419128,0,2,10,RobustScaler_UltraDeep_WD1e-2_best.pth
+QuantileTransformer_UltraDeep_WD1e-3,QuantileTransformer,UltraDeep_WD1e-3,71.76746368408203,0.9659942388534546,0,3,9,QuantileTransformer_UltraDeep_WD1e-3_best.pth
+QuantileTransformer_UltraResNet_WD1e-3,QuantileTransformer,UltraResNet_WD1e-3,75.65140533447266,0.9610040783882141,0,0,7,QuantileTransformer_UltraResNet_WD1e-3_best.pth
+RobustScaler_UltraDeep_WD1e-3,RobustScaler,UltraDeep_WD1e-3,78.81008911132812,0.9579229950904846,0,1,6,RobustScaler_UltraDeep_WD1e-3_best.pth
