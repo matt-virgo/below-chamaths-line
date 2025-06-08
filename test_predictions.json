@@ -1,0 +1,2002 @@
+[
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1027,
+      "total_receipts_amount": 180
+    },
+    "actual": 804.96,
+    "predicted": 805.7269668989161,
+    "error": 0.7669668989160527
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 483,
+      "total_receipts_amount": 52.64
+    },
+    "actual": 949.04,
+    "predicted": 932.6171413579675,
+    "error": 16.422858642032452
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 836,
+      "total_receipts_amount": 2035.17
+    },
+    "actual": 1718.79,
+    "predicted": 1781.6178086134448,
+    "error": 62.82780861344486
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 13,
+      "total_receipts_amount": 4.67
+    },
+    "actual": 203.52,
+    "predicted": 229.74935373266737,
+    "error": 26.229353732667363
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 1086,
+      "total_receipts_amount": 2319.81
+    },
+    "actual": 1858.36,
+    "predicted": 1828.425882450454,
+    "error": 29.934117549545817
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 1005,
+      "total_receipts_amount": 1391.37
+    },
+    "actual": 1987.39,
+    "predicted": 1937.6377211807528,
+    "error": 49.752278819247294
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 182,
+      "total_receipts_amount": 347.82
+    },
+    "actual": 384.77,
+    "predicted": 432.1192329255928,
+    "error": 47.349232925592844
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 275,
+      "total_receipts_amount": 543.74
+    },
+    "actual": 572.73,
+    "predicted": 633.0783839919591,
+    "error": 60.348383991959054
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 413,
+      "total_receipts_amount": 222.83
+    },
+    "actual": 802.95,
+    "predicted": 806.9439745851093,
+    "error": 3.9939745851092994
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 756,
+      "total_receipts_amount": 1473.59
+    },
+    "actual": 1961.96,
+    "predicted": 1912.5365996411297,
+    "error": 49.42340035887037
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 1165,
+      "total_receipts_amount": 1868.79
+    },
+    "actual": 1945.95,
+    "predicted": 1961.7004789346272,
+    "error": 15.750478934627154
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 1046,
+      "total_receipts_amount": 1850.85
+    },
+    "actual": 1875.72,
+    "predicted": 1910.7294780293896,
+    "error": 35.009478029389584
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 273,
+      "total_receipts_amount": 502.37
+    },
+    "actual": 862.61,
+    "predicted": 911.8381415164857,
+    "error": 49.22814151648572
+  },
+  {
+    "input": {
+      "trip_duration_days": 13,
+      "miles_traveled": 125,
+      "total_receipts_amount": 2004.61
+    },
+    "actual": 1721.56,
+    "predicted": 1743.152208122233,
+    "error": 21.59220812223316
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 780,
+      "total_receipts_amount": 366.37
+    },
+    "actual": 516.69,
+    "predicted": 610.7036713698944,
+    "error": 94.01367136989438
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 976,
+      "total_receipts_amount": 1526.58
+    },
+    "actual": 1995.87,
+    "predicted": 2035.6311176705576,
+    "error": 39.761117670557724
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 266.87,
+      "total_receipts_amount": 252.08
+    },
+    "actual": 880.41,
+    "predicted": 806.2641501096575,
+    "error": 74.14584989034245
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 131,
+      "total_receipts_amount": 1990
+    },
+    "actual": 1557.2,
+    "predicted": 1584.0279187068363,
+    "error": 26.82791870683627
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 290,
+      "total_receipts_amount": 814.04
+    },
+    "actual": 1077.35,
+    "predicted": 1081.0029818411624,
+    "error": 3.6529818411625
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 80,
+      "total_receipts_amount": 21.05
+    },
+    "actual": 366.87,
+    "predicted": 380.0809316782163,
+    "error": 13.210931678216298
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 1077,
+      "total_receipts_amount": 32.55
+    },
+    "actual": 1387.43,
+    "predicted": 1385.6389543268176,
+    "error": 1.7910456731824524
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 459,
+      "total_receipts_amount": 2183.11
+    },
+    "actual": 1559.59,
+    "predicted": 1591.1117928285162,
+    "error": 31.521792828516254
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 57,
+      "total_receipts_amount": 936.89
+    },
+    "actual": 1237.07,
+    "predicted": 1321.2682663757848,
+    "error": 84.1982663757849
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 767,
+      "total_receipts_amount": 186.47
+    },
+    "actual": 1292.77,
+    "predicted": 1239.0181206976877,
+    "error": 53.75187930231232
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 1053,
+      "total_receipts_amount": 1864.01
+    },
+    "actual": 1794.57,
+    "predicted": 1825.4023721582512,
+    "error": 30.832372158251246
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 1044,
+      "total_receipts_amount": 47.46
+    },
+    "actual": 1133.45,
+    "predicted": 1044.2919125277851,
+    "error": 89.1580874722149
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 423,
+      "total_receipts_amount": 1639.17
+    },
+    "actual": 1367.64,
+    "predicted": 1358.4854029084686,
+    "error": 9.154597091531514
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 697,
+      "total_receipts_amount": 651.64
+    },
+    "actual": 1237.71,
+    "predicted": 1225.145207151953,
+    "error": 12.564792848047091
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1068,
+      "total_receipts_amount": 2011.28
+    },
+    "actual": 1421.45,
+    "predicted": 1423.3161132729533,
+    "error": 1.866113272953271
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 1048,
+      "total_receipts_amount": 279.75
+    },
+    "actual": 780.15,
+    "predicted": 818.1184141900477,
+    "error": 37.968414190047724
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 671,
+      "total_receipts_amount": 1262.85
+    },
+    "actual": 1600.42,
+    "predicted": 1612.7977578057003,
+    "error": 12.377757805700185
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 1120,
+      "total_receipts_amount": 1514.91
+    },
+    "actual": 1658.97,
+    "predicted": 1675.473840309666,
+    "error": 16.503840309665975
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 240,
+      "total_receipts_amount": 1895.67
+    },
+    "actual": 1386.33,
+    "predicted": 1373.0138765061376,
+    "error": 13.316123493862278
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 1003,
+      "total_receipts_amount": 983.23
+    },
+    "actual": 1996.18,
+    "predicted": 2027.3035391063515,
+    "error": 31.123539106351473
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 822,
+      "total_receipts_amount": 2170.53
+    },
+    "actual": 1374.91,
+    "predicted": 1422.4400928779291,
+    "error": 47.530092877929064
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 297.64,
+      "total_receipts_amount": 481.09
+    },
+    "actual": 835.08,
+    "predicted": 803.5044342324328,
+    "error": 31.57556576756724
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 916,
+      "total_receipts_amount": 1036.91
+    },
+    "actual": 2098.07,
+    "predicted": 1998.414420074187,
+    "error": 99.65557992581307
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 755,
+      "total_receipts_amount": 1584.41
+    },
+    "actual": 1729.08,
+    "predicted": 1677.226425205975,
+    "error": 51.85357479402501
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 359.62,
+      "total_receipts_amount": 221.15
+    },
+    "actual": 255.57,
+    "predicted": 273.71090476764914,
+    "error": 18.140904767649147
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 132,
+      "total_receipts_amount": 2387.03
+    },
+    "actual": 1454.05,
+    "predicted": 1486.821364543538,
+    "error": 32.771364543538084
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 1192,
+      "total_receipts_amount": 23.47
+    },
+    "actual": 1157.87,
+    "predicted": 1283.380192690447,
+    "error": 125.51019269044718
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 1012,
+      "total_receipts_amount": 1429.04
+    },
+    "actual": 1880.76,
+    "predicted": 1924.0641991656173,
+    "error": 43.30419916561732
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 578,
+      "total_receipts_amount": 1167.71
+    },
+    "actual": 1587.21,
+    "predicted": 1620.0985418287703,
+    "error": 32.88854182877026
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 477,
+      "total_receipts_amount": 18.97
+    },
+    "actual": 631.5,
+    "predicted": 610.6083809068484,
+    "error": 20.891619093151576
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 414,
+      "total_receipts_amount": 1919.7
+    },
+    "actual": 1918.89,
+    "predicted": 1880.3045750391689,
+    "error": 38.58542496083123
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 5,
+      "total_receipts_amount": 1338.9
+    },
+    "actual": 1610.25,
+    "predicted": 1581.399686349306,
+    "error": 28.850313650694034
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1175,
+      "total_receipts_amount": 816.2
+    },
+    "actual": 1237.62,
+    "predicted": 1177.6903723780501,
+    "error": 59.92962762194975
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1158,
+      "total_receipts_amount": 1107.4
+    },
+    "actual": 1361.3,
+    "predicted": 1446.6324666699475,
+    "error": 85.33246666994751
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 522,
+      "total_receipts_amount": 1210.87
+    },
+    "actual": 1577.01,
+    "predicted": 1582.097791303358,
+    "error": 5.087791303358017
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 448,
+      "total_receipts_amount": 732.79
+    },
+    "actual": 1090.35,
+    "predicted": 1126.4514816835303,
+    "error": 36.10148168353044
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 323,
+      "total_receipts_amount": 46.48
+    },
+    "actual": 703.45,
+    "predicted": 780.4999496017364,
+    "error": 77.04994960173633
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 184,
+      "total_receipts_amount": 983.77
+    },
+    "actual": 1202.69,
+    "predicted": 1214.7257134003498,
+    "error": 12.035713400349778
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 950,
+      "total_receipts_amount": 1739.62
+    },
+    "actual": 2032.23,
+    "predicted": 1959.306144982528,
+    "error": 72.92385501747208
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1159,
+      "total_receipts_amount": 2209.44
+    },
+    "actual": 1434.84,
+    "predicted": 1484.8697691482148,
+    "error": 50.02976914821488
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 372,
+      "total_receipts_amount": 348.37
+    },
+    "actual": 950.24,
+    "predicted": 915.6544166638511,
+    "error": 34.58558333614894
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 127,
+      "total_receipts_amount": 293.49
+    },
+    "actual": 303.2,
+    "predicted": 333.0395237390628,
+    "error": 29.839523739062827
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 907,
+      "total_receipts_amount": 1650.17
+    },
+    "actual": 1737.86,
+    "predicted": 1819.2888643702292,
+    "error": 81.42886437022935
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 432,
+      "total_receipts_amount": 581.71
+    },
+    "actual": 448.34,
+    "predicted": 387.3943579216092,
+    "error": 60.94564207839079
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 631,
+      "total_receipts_amount": 1220.71
+    },
+    "actual": 1730.86,
+    "predicted": 1728.7931598342632,
+    "error": 2.0668401657367212
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1139,
+      "total_receipts_amount": 306.43
+    },
+    "actual": 726.14,
+    "predicted": 736.3101129093926,
+    "error": 10.170112909392628
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 716,
+      "total_receipts_amount": 1396.41
+    },
+    "actual": 1376.59,
+    "predicted": 1364.5208575501345,
+    "error": 12.069142449865467
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 392,
+      "total_receipts_amount": 661.27
+    },
+    "actual": 978.13,
+    "predicted": 954.6368982028114,
+    "error": 23.493101797188615
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 375,
+      "total_receipts_amount": 1346.21
+    },
+    "actual": 1339.93,
+    "predicted": 1397.9774404607722,
+    "error": 58.04744046077212
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 262,
+      "total_receipts_amount": 1681.28
+    },
+    "actual": 1435.34,
+    "predicted": 1445.38021397825,
+    "error": 10.040213978249994
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 532,
+      "total_receipts_amount": 2419.86
+    },
+    "actual": 1653.69,
+    "predicted": 1653.7175159289357,
+    "error": 0.02751592893559973
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 250,
+      "total_receipts_amount": 1300.17
+    },
+    "actual": 1145.33,
+    "predicted": 1179.8603215379649,
+    "error": 34.53032153796494
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 307,
+      "total_receipts_amount": 266.21
+    },
+    "actual": 540.97,
+    "predicted": 483.7560792626361,
+    "error": 57.213920737363935
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 606,
+      "total_receipts_amount": 1184.23
+    },
+    "actual": 1364.54,
+    "predicted": 1436.3597157911038,
+    "error": 71.81971579110382
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 17,
+      "total_receipts_amount": 550.58
+    },
+    "actual": 830.07,
+    "predicted": 790.5031858877632,
+    "error": 39.5668141122369
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 924,
+      "total_receipts_amount": 1227.21
+    },
+    "actual": 1871.76,
+    "predicted": 1871.4193319017768,
+    "error": 0.34066809822320465
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 1126,
+      "total_receipts_amount": 1103.75
+    },
+    "actual": 2014.72,
+    "predicted": 2026.7413105457788,
+    "error": 12.02131054577876
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 273,
+      "total_receipts_amount": 799.9
+    },
+    "actual": 1155.05,
+    "predicted": 1112.5725280716345,
+    "error": 42.4774719283655
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 309,
+      "total_receipts_amount": 1211.37
+    },
+    "actual": 1110.55,
+    "predicted": 1148.0950393468702,
+    "error": 37.545039346870226
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 307,
+      "total_receipts_amount": 957.17
+    },
+    "actual": 1432.75,
+    "predicted": 1502.0323771078206,
+    "error": 69.2823771078206
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 96,
+      "total_receipts_amount": 1164.37
+    },
+    "actual": 1553.21,
+    "predicted": 1635.2204659955398,
+    "error": 82.01046599553979
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 467,
+      "total_receipts_amount": 1178.71
+    },
+    "actual": 1483.33,
+    "predicted": 1556.7857572707876,
+    "error": 73.45575727078767
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 150,
+      "total_receipts_amount": 418.41
+    },
+    "actual": 844.9,
+    "predicted": 809.8171733116635,
+    "error": 35.08282668833647
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 205,
+      "total_receipts_amount": 545.57
+    },
+    "actual": 682.22,
+    "predicted": 653.9302498891773,
+    "error": 28.28975011082275
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1189,
+      "total_receipts_amount": 1164.74
+    },
+    "actual": 1666.52,
+    "predicted": 1611.433335210066,
+    "error": 55.08666478993405
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 1083,
+      "total_receipts_amount": 2105.36
+    },
+    "actual": 1844.58,
+    "predicted": 1887.217162307359,
+    "error": 42.637162307359176
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 36,
+      "total_receipts_amount": 2022.94
+    },
+    "actual": 1410.58,
+    "predicted": 1386.2241797274814,
+    "error": 24.355820272518486
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 471,
+      "total_receipts_amount": 332.51
+    },
+    "actual": 872.19,
+    "predicted": 903.0927850934812,
+    "error": 30.902785093481157
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 643,
+      "total_receipts_amount": 2263.77
+    },
+    "actual": 1685.92,
+    "predicted": 1696.0747723153095,
+    "error": 10.154772315309401
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 24,
+      "total_receipts_amount": 2029.04
+    },
+    "actual": 1569.37,
+    "predicted": 1456.1772278556373,
+    "error": 113.1927721443626
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 714,
+      "total_receipts_amount": 2003.23
+    },
+    "actual": 1829.06,
+    "predicted": 1847.894674389496,
+    "error": 18.834674389496058
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 305,
+      "total_receipts_amount": 125.79
+    },
+    "actual": 664.43,
+    "predicted": 604.8706871412942,
+    "error": 59.559312858705766
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 296,
+      "total_receipts_amount": 485.68
+    },
+    "actual": 924.9,
+    "predicted": 959.9321962830627,
+    "error": 35.03219628306272
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 741,
+      "total_receipts_amount": 1207.39
+    },
+    "actual": 1878.06,
+    "predicted": 1802.9581105511334,
+    "error": 75.10188944886659
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 986,
+      "total_receipts_amount": 2390.92
+    },
+    "actual": 1760.0,
+    "predicted": 1806.3130535180762,
+    "error": 46.31305351807623
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 978,
+      "total_receipts_amount": 710.43
+    },
+    "actual": 1624.58,
+    "predicted": 1671.1400569218574,
+    "error": 46.560056921857495
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 1009,
+      "total_receipts_amount": 1378.07
+    },
+    "actual": 1903.76,
+    "predicted": 1913.2170801356967,
+    "error": 9.457080135696742
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 80,
+      "total_receipts_amount": 517.54
+    },
+    "actual": 457.49,
+    "predicted": 488.150606440088,
+    "error": 30.660606440087975
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 164,
+      "total_receipts_amount": 1144.9
+    },
+    "actual": 1516.43,
+    "predicted": 1551.3988249397653,
+    "error": 34.96882493976523
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 840,
+      "total_receipts_amount": 941.55
+    },
+    "actual": 1676.48,
+    "predicted": 1611.6570953632997,
+    "error": 64.82290463670029
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 629,
+      "total_receipts_amount": 484.34
+    },
+    "actual": 1029.87,
+    "predicted": 1016.0045504407858,
+    "error": 13.865449559214085
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 761,
+      "total_receipts_amount": 530.19
+    },
+    "actual": 1120.1,
+    "predicted": 1069.524830850404,
+    "error": 50.57516914959592
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 292,
+      "total_receipts_amount": 449.83
+    },
+    "actual": 363.02,
+    "predicted": 310.48013408771016,
+    "error": 52.53986591228983
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 370,
+      "total_receipts_amount": 1554.5
+    },
+    "actual": 1311.23,
+    "predicted": 1338.130930675862,
+    "error": 26.9009306758619
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 1158,
+      "total_receipts_amount": 2104.61
+    },
+    "actual": 1899.69,
+    "predicted": 1913.9793856208316,
+    "error": 14.289385620831581
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1166,
+      "total_receipts_amount": 530.44
+    },
+    "actual": 785.59,
+    "predicted": 808.3823574330302,
+    "error": 22.792357433030134
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 916,
+      "total_receipts_amount": 2394.85
+    },
+    "actual": 1740.85,
+    "predicted": 1792.8580293939303,
+    "error": 52.00802939393043
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 516,
+      "total_receipts_amount": 1464.67
+    },
+    "actual": 1842.1,
+    "predicted": 1875.572787813461,
+    "error": 33.47278781346108
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 467,
+      "total_receipts_amount": 1243.31
+    },
+    "actual": 1549.82,
+    "predicted": 1517.3561905438357,
+    "error": 32.4638094561642
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 654,
+      "total_receipts_amount": 1272.89
+    },
+    "actual": 1724.68,
+    "predicted": 1605.2615914908718,
+    "error": 119.41840850912831
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 1076,
+      "total_receipts_amount": 190.33
+    },
+    "actual": 879.65,
+    "predicted": 956.3454973573492,
+    "error": 76.69549735734927
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 81,
+      "total_receipts_amount": 1251.97
+    },
+    "actual": 1682.62,
+    "predicted": 1715.2635880574296,
+    "error": 32.643588057429724
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 760,
+      "total_receipts_amount": 2073.25
+    },
+    "actual": 1522.45,
+    "predicted": 1512.285947610129,
+    "error": 10.16405238987113
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 714,
+      "total_receipts_amount": 617.72
+    },
+    "actual": 1164.2,
+    "predicted": 1131.6192264119113,
+    "error": 32.58077358808873
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 217,
+      "total_receipts_amount": 1506.46
+    },
+    "actual": 1455.37,
+    "predicted": 1439.7726014462985,
+    "error": 15.597398553701396
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 840,
+      "total_receipts_amount": 870.82
+    },
+    "actual": 1496.46,
+    "predicted": 1516.7159261434383,
+    "error": 20.255926143438273
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 263,
+      "total_receipts_amount": 2469.06
+    },
+    "actual": 1503.98,
+    "predicted": 1482.310345515757,
+    "error": 21.669654484242983
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 794.32,
+      "total_receipts_amount": 402.31
+    },
+    "actual": 671.06,
+    "predicted": 706.2516612421466,
+    "error": 35.191661242146665
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 663,
+      "total_receipts_amount": 2141.08
+    },
+    "actual": 1715.29,
+    "predicted": 1750.0099632653985,
+    "error": 34.71996326539852
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1136,
+      "total_receipts_amount": 1296.54
+    },
+    "actual": 1536.6,
+    "predicted": 1566.8575486302989,
+    "error": 30.25754863029897
+  },
+  {
+    "input": {
+      "trip_duration_days": 13,
+      "miles_traveled": 8,
+      "total_receipts_amount": 78.44
+    },
+    "actual": 713.71,
+    "predicted": 803.6257614425867,
+    "error": 89.9157614425867
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 204,
+      "total_receipts_amount": 818.99
+    },
+    "actual": 628.4,
+    "predicted": 904.8113360344223,
+    "error": 276.41133603442233
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 955,
+      "total_receipts_amount": 106.86
+    },
+    "actual": 897.78,
+    "predicted": 886.2575405566315,
+    "error": 11.522459443368462
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 748,
+      "total_receipts_amount": 653.42
+    },
+    "actual": 1249.66,
+    "predicted": 1322.2711277543044,
+    "error": 72.61112775430433
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 662,
+      "total_receipts_amount": 2275.59
+    },
+    "actual": 1599.27,
+    "predicted": 1629.3524697288597,
+    "error": 30.082469728859678
+  },
+  {
+    "input": {
+      "trip_duration_days": 13,
+      "miles_traveled": 63,
+      "total_receipts_amount": 107.92
+    },
+    "actual": 710.25,
+    "predicted": 741.9525801328728,
+    "error": 31.702580132872754
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 218,
+      "total_receipts_amount": 1203.45
+    },
+    "actual": 1561.63,
+    "predicted": 1557.9871387581472,
+    "error": 3.64286124185287
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 713,
+      "total_receipts_amount": 740.33
+    },
+    "actual": 1048.28,
+    "predicted": 988.9111052093837,
+    "error": 59.36889479061631
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 13,
+      "total_receipts_amount": 986.41
+    },
+    "actual": 1271.52,
+    "predicted": 1361.2041729438324,
+    "error": 89.68417294383244
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 33,
+      "total_receipts_amount": 1249.13
+    },
+    "actual": 1707.38,
+    "predicted": 1638.1508633618362,
+    "error": 69.22913663816394
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 865,
+      "total_receipts_amount": 1422.11
+    },
+    "actual": 1921.18,
+    "predicted": 1921.8443456693014,
+    "error": 0.6643456693013832
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 301,
+      "total_receipts_amount": 769.23
+    },
+    "actual": 731.28,
+    "predicted": 755.1994583637803,
+    "error": 23.919458363780336
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 530,
+      "total_receipts_amount": 2028.06
+    },
+    "actual": 2079.14,
+    "predicted": 1988.0841633737361,
+    "error": 91.05583662626373
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 512,
+      "total_receipts_amount": 1251.6
+    },
+    "actual": 1360.76,
+    "predicted": 1394.9768611011643,
+    "error": 34.21686110116434
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 769,
+      "total_receipts_amount": 2497.93
+    },
+    "actual": 1587.8,
+    "predicted": 1559.6507398702306,
+    "error": 28.149260129769345
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 269,
+      "total_receipts_amount": 708.05
+    },
+    "actual": 799.12,
+    "predicted": 792.3845475484135,
+    "error": 6.735452451586525
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 1010,
+      "total_receipts_amount": 2054.21
+    },
+    "actual": 1810.37,
+    "predicted": 1688.772572392948,
+    "error": 121.59742760705194
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 181,
+      "total_receipts_amount": 128.05
+    },
+    "actual": 225.12,
+    "predicted": 253.87843996135527,
+    "error": 28.758439961355265
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 872,
+      "total_receipts_amount": 2191.27
+    },
+    "actual": 1776.62,
+    "predicted": 1762.5933316923506,
+    "error": 14.026668307649288
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 650,
+      "total_receipts_amount": 619.49
+    },
+    "actual": 676.38,
+    "predicted": 727.4678450192864,
+    "error": 51.08784501928642
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 1100,
+      "total_receipts_amount": 237.69
+    },
+    "actual": 1265.57,
+    "predicted": 1307.360783903509,
+    "error": 41.79078390350901
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 66.13,
+      "total_receipts_amount": 848.03
+    },
+    "actual": 1050.25,
+    "predicted": 1070.0258717876661,
+    "error": 19.77587178766612
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 1075,
+      "total_receipts_amount": 2328.11
+    },
+    "actual": 1798.38,
+    "predicted": 1866.225785917578,
+    "error": 67.84578591757781
+  },
+  {
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 1194,
+      "total_receipts_amount": 2250.51
+    },
+    "actual": 1691.15,
+    "predicted": 1603.6505360403266,
+    "error": 87.49946395967345
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 87,
+      "total_receipts_amount": 498.96
+    },
+    "actual": 781.97,
+    "predicted": 811.9875723853478,
+    "error": 30.017572385347762
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 333,
+      "total_receipts_amount": 1103.21
+    },
+    "actual": 1618.13,
+    "predicted": 1603.738277709467,
+    "error": 14.391722290533153
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 636,
+      "total_receipts_amount": 697.02
+    },
+    "actual": 1276.06,
+    "predicted": 1238.9874944922335,
+    "error": 37.07250550776644
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 623,
+      "total_receipts_amount": 1691.39
+    },
+    "actual": 1800.86,
+    "predicted": 1750.4031080487366,
+    "error": 50.45689195126329
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 470,
+      "total_receipts_amount": 2235.72
+    },
+    "actual": 1628.6,
+    "predicted": 1668.7828124340006,
+    "error": 40.18281243400065
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 660,
+      "total_receipts_amount": 1944.4
+    },
+    "actual": 1531.2,
+    "predicted": 1473.357127874338,
+    "error": 57.8428721256621
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 650,
+      "total_receipts_amount": 524.8
+    },
+    "actual": 1179.09,
+    "predicted": 1211.2964502215975,
+    "error": 32.206450221597606
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 884,
+      "total_receipts_amount": 1798.31
+    },
+    "actual": 1897.87,
+    "predicted": 1820.6767128658926,
+    "error": 77.19328713410732
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 252.75,
+      "total_receipts_amount": 285.5
+    },
+    "actual": 331.74,
+    "predicted": 286.9416634966701,
+    "error": 44.79833650332989
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 697,
+      "total_receipts_amount": 2148.5
+    },
+    "actual": 1421.07,
+    "predicted": 1405.2420089240895,
+    "error": 15.827991075910404
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 362.79,
+      "total_receipts_amount": 749.19
+    },
+    "actual": 636.51,
+    "predicted": 646.836327978967,
+    "error": 10.326327978967015
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 175,
+      "total_receipts_amount": 440.19
+    },
+    "actual": 431.17,
+    "predicted": 468.77393108517987,
+    "error": 37.60393108517985
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 942,
+      "total_receipts_amount": 2092.87
+    },
+    "actual": 1696.72,
+    "predicted": 1767.6732574873831,
+    "error": 70.9532574873831
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1155,
+      "total_receipts_amount": 1517.18
+    },
+    "actual": 1543.17,
+    "predicted": 1532.154473569632,
+    "error": 11.015526430368027
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 1173,
+      "total_receipts_amount": 671.25
+    },
+    "actual": 1419.34,
+    "predicted": 1503.5938537293105,
+    "error": 84.25385372931055
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 224,
+      "total_receipts_amount": 407.51
+    },
+    "actual": 794.7,
+    "predicted": 819.7124947137498,
+    "error": 25.01249471374979
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 466,
+      "total_receipts_amount": 1291.33
+    },
+    "actual": 1770.37,
+    "predicted": 1769.8457572113928,
+    "error": 0.5242427886071255
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 1004,
+      "total_receipts_amount": 167.15
+    },
+    "actual": 1175.65,
+    "predicted": 1191.024758562007,
+    "error": 15.374758562006946
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 1090,
+      "total_receipts_amount": 2248.68
+    },
+    "actual": 1905.5,
+    "predicted": 1931.1465330356036,
+    "error": 25.646533035603625
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 738,
+      "total_receipts_amount": 730.28
+    },
+    "actual": 1429.72,
+    "predicted": 1416.6639701168656,
+    "error": 13.056029883134443
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 1004,
+      "total_receipts_amount": 2367.63
+    },
+    "actual": 1743.85,
+    "predicted": 1628.1915337781859,
+    "error": 115.65846622181402
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 154,
+      "total_receipts_amount": 274.04
+    },
+    "actual": 406.91,
+    "predicted": 395.1686668265606,
+    "error": 11.741333173439443
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 675,
+      "total_receipts_amount": 2277.93
+    },
+    "actual": 1807.33,
+    "predicted": 1781.3989724844891,
+    "error": 25.931027515510777
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 41,
+      "total_receipts_amount": 4.52
+    },
+    "actual": 320.12,
+    "predicted": 339.715666924278,
+    "error": 19.59566692427802
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 125,
+      "total_receipts_amount": 193.62
+    },
+    "actual": 616.24,
+    "predicted": 606.0117711743595,
+    "error": 10.228228825640485
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 798,
+      "total_receipts_amount": 2334.41
+    },
+    "actual": 1485.4,
+    "predicted": 1504.4609684987722,
+    "error": 19.060968498772127
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 965,
+      "total_receipts_amount": 1851.28
+    },
+    "actual": 1805.77,
+    "predicted": 1867.1995813876813,
+    "error": 61.42958138768131
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 836,
+      "total_receipts_amount": 735.52
+    },
+    "actual": 1606.63,
+    "predicted": 1601.2115598894718,
+    "error": 5.418440110528309
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 781,
+      "total_receipts_amount": 2114.27
+    },
+    "actual": 1789.85,
+    "predicted": 1793.5314741181376,
+    "error": 3.6814741181376576
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 941,
+      "total_receipts_amount": 1565.77
+    },
+    "actual": 1432.79,
+    "predicted": 1501.3080519795085,
+    "error": 68.51805197950853
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 692,
+      "total_receipts_amount": 450.7
+    },
+    "actual": 748.57,
+    "predicted": 754.9502736457347,
+    "error": 6.380273645734633
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 643,
+      "total_receipts_amount": 2194.16
+    },
+    "actual": 1758.03,
+    "predicted": 1782.791361405048,
+    "error": 24.761361405048092
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 1078,
+      "total_receipts_amount": 161.85
+    },
+    "actual": 1260.96,
+    "predicted": 1154.4469196936193,
+    "error": 106.51308030638074
+  },
+  {
+    "input": {
+      "trip_duration_days": 7,
+      "miles_traveled": 1168,
+      "total_receipts_amount": 667.94
+    },
+    "actual": 1639.55,
+    "predicted": 1492.4420725990112,
+    "error": 147.10792740098873
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 462,
+      "total_receipts_amount": 2047.57
+    },
+    "actual": 1202.9,
+    "predicted": 1196.0119230759565,
+    "error": 6.888076924043617
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 1065,
+      "total_receipts_amount": 203.2
+    },
+    "actual": 1408.25,
+    "predicted": 1316.542211507444,
+    "error": 91.70778849255589
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 222,
+      "total_receipts_amount": 456.24
+    },
+    "actual": 437.4,
+    "predicted": 427.6333853690819,
+    "error": 9.76661463091807
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 521,
+      "total_receipts_amount": 1448.55
+    },
+    "actual": 1624.01,
+    "predicted": 1600.1258728687922,
+    "error": 23.884127131207833
+  },
+  {
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 1124,
+      "total_receipts_amount": 1908.69
+    },
+    "actual": 1833.27,
+    "predicted": 1833.4451048694577,
+    "error": 0.17510486945775483
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 586,
+      "total_receipts_amount": 2135.36
+    },
+    "actual": 1661.61,
+    "predicted": 1664.427101719487,
+    "error": 2.8171017194870274
+  },
+  {
+    "input": {
+      "trip_duration_days": 13,
+      "miles_traveled": 19,
+      "total_receipts_amount": 807.27
+    },
+    "actual": 1331.53,
+    "predicted": 1275.0874880504196,
+    "error": 56.44251194958042
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 516,
+      "total_receipts_amount": 1450.67
+    },
+    "actual": 1547.5,
+    "predicted": 1586.8756098942652,
+    "error": 39.37560989426515
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 288.72,
+      "total_receipts_amount": 159.26
+    },
+    "actual": 303.94,
+    "predicted": 291.6669600210877,
+    "error": 12.273039978912323
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 477,
+      "total_receipts_amount": 704.42
+    },
+    "actual": 1045.96,
+    "predicted": 1076.1133995279731,
+    "error": 30.15339952797308
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 262,
+      "total_receipts_amount": 1173.79
+    },
+    "actual": 1485.59,
+    "predicted": 1466.0367524762698,
+    "error": 19.55324752373008
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 600,
+      "total_receipts_amount": 1120.05
+    },
+    "actual": 1847.84,
+    "predicted": 1826.8669640632838,
+    "error": 20.973035936716087
+  },
+  {
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 654,
+      "total_receipts_amount": 1516.42
+    },
+    "actual": 1870.43,
+    "predicted": 1882.243538996583,
+    "error": 11.81353899658302
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 754,
+      "total_receipts_amount": 489.99
+    },
+    "actual": 765.13,
+    "predicted": 882.0552150191728,
+    "error": 116.92521501917281
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 994,
+      "total_receipts_amount": 1742.62
+    },
+    "actual": 1849.58,
+    "predicted": 1880.7591337656318,
+    "error": 31.179133765631832
+  },
+  {
+    "input": {
+      "trip_duration_days": 13,
+      "miles_traveled": 1055,
+      "total_receipts_amount": 2005.84
+    },
+    "actual": 1997.52,
+    "predicted": 1965.9034698395444,
+    "error": 31.616530160455568
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 893,
+      "total_receipts_amount": 19.76
+    },
+    "actual": 570.71,
+    "predicted": 586.5464949549989,
+    "error": 15.836494954998898
+  },
+  {
+    "input": {
+      "trip_duration_days": 10,
+      "miles_traveled": 834,
+      "total_receipts_amount": 1820.8
+    },
+    "actual": 1883.49,
+    "predicted": 1822.7844587482127,
+    "error": 60.70554125178728
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 276.85,
+      "total_receipts_amount": 485.54
+    },
+    "actual": 361.66,
+    "predicted": 340.3111351578354,
+    "error": 21.34886484216463
+  },
+  {
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 752,
+      "total_receipts_amount": 958.29
+    },
+    "actual": 1144.41,
+    "predicted": 1204.9022612847166,
+    "error": 60.492261284716506
+  },
+  {
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 909,
+      "total_receipts_amount": 1332.18
+    },
+    "actual": 1720.21,
+    "predicted": 1835.1605872752916,
+    "error": 114.95058727529158
+  },
+  {
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 458,
+      "total_receipts_amount": 834.7
+    },
+    "actual": 737.28,
+    "predicted": 792.293245629392,
+    "error": 55.01324562939203
+  },
+  {
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 807,
+      "total_receipts_amount": 2358.41
+    },
+    "actual": 1819.41,
+    "predicted": 1908.4407199274367,
+    "error": 89.03071992743662
+  },
+  {
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 471,
+      "total_receipts_amount": 288.19
+    },
+    "actual": 535.67,
+    "predicted": 592.3123622793844,
+    "error": 56.64236227938443
+  },
+  {
+    "input": {
+      "trip_duration_days": 12,
+      "miles_traveled": 37,
+      "total_receipts_amount": 52.65
+    },
+    "actual": 789.01,
+    "predicted": 797.9055359856333,
+    "error": 8.895535985633273
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 261,
+      "total_receipts_amount": 464.94
+    },
+    "actual": 621.12,
+    "predicted": 658.6083437222761,
+    "error": 37.48834372227611
+  },
+  {
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 195.73,
+      "total_receipts_amount": 1228.49
+    },
+    "actual": 511.23,
+    "predicted": 542.954896567612,
+    "error": 31.72489656761195
+  },
+  {
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 463,
+      "total_receipts_amount": 1024.53
+    },
+    "actual": 1476.48,
+    "predicted": 1439.9448233525193,
+    "error": 36.53517664748074
+  }
+]

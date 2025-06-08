@@ -1,0 +1,33 @@
+Gradient Boosting Model Results
+================================
+
+Cross-Validation RMSE: 108.2793 ± 25.3484
+Training RMSE: 8.6233
+Training MAE: 5.0592
+Training R²: 0.9997
+Test RMSE: 83.0345
+Test MAE: 63.6758
+Test R²: 0.9719
+
+Top 20 Features:
+                     feature  importance
+       compiler_optimization    0.227025
+   days_receipts_interaction    0.215801
+              reciprocal_sum    0.104339
+               receipts_sqrt    0.104108
+             log_combination    0.036567
+  miles_receipts_interaction    0.034027
+                  cluster_id    0.031086
+      receipts_ends_in_49_99    0.027626
+receipts_diminishing_returns    0.024376
+            hustle_indicator    0.023236
+          binned_interaction    0.019963
+            receipts_squared    0.019172
+                receipts_log    0.015160
+                binary_flags    0.013568
+                poly_combo_1    0.010771
+      days_miles_interaction    0.010694
+          total_effort_score    0.010203
+                lookup_table    0.007295
+              geometric_mean    0.005372
+             noise_injection    0.005125

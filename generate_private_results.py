@@ -1,203 +1,303 @@
 #!/usr/bin/env python3
 
+"""
+TabPFN Business Rules Champion - Private Results Generation
+Train once on public cases, then efficiently batch process private cases
+
+This script:
+1. Loads public cases for training (like we did in batch evaluation)
+2. Trains TabPFN once with business rules features
+3. Loads private cases and processes them in batch
+4. Outputs results to private_results.txt in the required format
+"""
+
 import json
+import math
+import time
 import numpy as np
 import pandas as pd
-import torch
-import torch.nn as nn
-import pickle
-import time
-import sys
 import warnings
 warnings.filterwarnings('ignore')
 
-# Import the model architecture and features from ultra_deep_learning
-from ultra_deep_learning import AttentionNet, create_ultra_features
+# Set random seeds for reproducibility
+np.random.seed(42)
 
-def load_best_model():
-    """Load the best model and its scalers once"""
+def load_public_cases():
+    """Load all public cases for training"""
+    print("📊 Loading public cases for training...")
     
-    print("🔧 Loading best model and scalers...")
+    with open('public_cases.json', 'r') as f:
+        public_data = json.load(f)
     
-    # Best model details
-    model_id = "QuantileTransformer_AttentionNet_WD2e-3"
-    model_file = f"{model_id}_best.pth"
-    scalers_file = f"{model_id}_scalers.pkl"
+    # Convert to DataFrame
+    df = pd.DataFrame([
+        {
+            'trip_duration_days': case['input']['trip_duration_days'],
+            'miles_traveled': case['input']['miles_traveled'],
+            'total_receipts_amount': case['input']['total_receipts_amount'],
+            'reimbursement': case['expected_output']
+        }
+        for case in public_data
+    ])
     
-    # Load scalers
-    try:
-        with open(scalers_file, 'rb') as f:
-            scalers = pickle.load(f)
-            scaler_X = scalers['scaler_X']
-            scaler_y = scalers['scaler_y']
-        print(f"✅ Loaded scalers: {scalers_file}")
-    except FileNotFoundError:
-        # Fallback to best_overall files
-        try:
-            with open('best_overall_scalers.pkl', 'rb') as f:
-                scalers = pickle.load(f)
-                scaler_X = scalers['scaler_X']
-                scaler_y = scalers['scaler_y']
-            model_file = 'best_overall_model.pth'
-            print(f"✅ Loaded fallback scalers: best_overall_scalers.pkl")
-        except FileNotFoundError:
-            raise FileNotFoundError("No model scalers found!")
-    
-    # Create model with correct architecture (58 input features)
-    model = AttentionNet(input_size=58, hidden_size=256)
-    
-    # Load model weights
-    try:
-        model.load_state_dict(torch.load(model_file, map_location='cpu'))
-        model.eval()
-        print(f"✅ Loaded model: {model_file}")
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Model file {model_file} not found!")
-    
-    # Count parameters
-    total_params = sum(p.numel() for p in model.parameters())
-    print(f"📊 Model has {total_params:,} parameters")
-    
-    return model, scaler_X, scaler_y
+    print(f"   ✅ Loaded {len(df)} public cases for training")
+    return df
 
-def predict_single_case(trip_duration_days, miles_traveled, total_receipts_amount, model, scaler_X, scaler_y):
-    """
-    Make a prediction for a single case (exactly like calculate_reimbursement.py)
-    """
+def load_private_cases():
+    """Load private cases for prediction"""
+    print("🔒 Loading private cases for prediction...")
     
-    # Create input DataFrame with the required format
-    input_df = pd.DataFrame([{
-        'trip_duration_days': trip_duration_days,
-        'miles_traveled': miles_traveled,
-        'total_receipts_amount': total_receipts_amount
-    }])
+    with open('private_cases.json', 'r') as f:
+        private_data = json.load(f)
     
-    # Create features using the same feature engineering
-    features_df = create_ultra_features(input_df)
+    # Convert to DataFrame
+    df = pd.DataFrame([
+        {
+            'trip_duration_days': case['trip_duration_days'],
+            'miles_traveled': case['miles_traveled'],
+            'total_receipts_amount': case['total_receipts_amount']
+        }
+        for case in private_data
+    ])
     
-    # Scale features
-    X_scaled = scaler_X.transform(features_df)
-    
-    # Make prediction
-    with torch.no_grad():
-        X_tensor = torch.FloatTensor(X_scaled)
-        y_scaled_pred = model(X_tensor)
-        
-        # Reverse scaling to get actual dollar amount
-        y_pred = scaler_y.inverse_transform(y_scaled_pred.numpy().reshape(-1, 1))
-        reimbursement = y_pred[0][0]
-    
-    return reimbursement
+    print(f"   ✅ Loaded {len(df)} private cases for prediction")
+    return df
 
-def generate_private_results():
-    """
-    Generate private_results.txt exactly like generate_results.sh but much faster
-    """
+def engineer_business_features(df_input):
+    """Apply our winning business rules feature engineering (31 features)"""
+    df = df_input.copy()
+
+    # Ensure trip_duration_days is at least 1 to avoid division by zero
+    df['trip_duration_days_safe'] = df['trip_duration_days'].apply(lambda x: x if x > 0 else 1)
+
+    # Base engineered features
+    df['miles_per_day'] = df['miles_traveled'] / df['trip_duration_days_safe']
+    df['receipts_per_day'] = df['total_receipts_amount'] / df['trip_duration_days_safe']
     
-    print("🧾 Black Box Challenge - Generating Private Results (Python)")
-    print("=" * 65)
-    print()
+    df['receipt_cents_val'] = df['total_receipts_amount'].apply(
+        lambda x: round((x - math.floor(x)) * 100) if isinstance(x, (int, float)) and not math.isnan(x) else 0
+    )
+    df['is_receipt_49_or_99_cents'] = df['receipt_cents_val'].apply(lambda x: 1 if x == 49 or x == 99 else 0).astype(int)
     
-    # Check if private cases exist
-    cases_file = 'private_cases.json'
-    results_file = 'private_results.txt'
+    # Trip length categories
+    df['is_5_day_trip'] = (df['trip_duration_days'] == 5).astype(int)
+    df['is_short_trip'] = (df['trip_duration_days'] < 4).astype(int)
+    df['is_medium_trip'] = ((df['trip_duration_days'] >= 4) & (df['trip_duration_days'] <= 6)).astype(int)
+    df['is_long_trip'] = ((df['trip_duration_days'] > 6) & (df['trip_duration_days'] < 8)).astype(int)
+    df['is_very_long_trip'] = (df['trip_duration_days'] >= 8).astype(int)
+
+    # Polynomial features
+    df['trip_duration_sq'] = df['trip_duration_days']**2
+    df['miles_traveled_sq'] = df['miles_traveled']**2
+    df['total_receipts_amount_sq'] = df['total_receipts_amount']**2
+    df['miles_per_day_sq'] = df['miles_per_day']**2
+    df['receipts_per_day_sq'] = df['receipts_per_day']**2
+
+    # Mileage-based features
+    df['miles_first_100'] = df['miles_traveled'].apply(lambda x: min(x, 100))
+    df['miles_after_100'] = df['miles_traveled'].apply(lambda x: max(0, x - 100))
+    df['is_high_mileage_trip'] = (df['miles_traveled'] > 500).astype(int)
+
+    # Receipt-based features
+    df['is_very_low_receipts_multiday'] = ((df['total_receipts_amount'] < 50) & (df['trip_duration_days'] > 1)).astype(int)
+    df['is_moderate_receipts'] = ((df['total_receipts_amount'] >= 600) & (df['total_receipts_amount'] <= 800)).astype(int)
+    df['is_high_receipts'] = ((df['total_receipts_amount'] > 800) & (df['total_receipts_amount'] <= 1200)).astype(int)
+    df['is_very_high_receipts'] = (df['total_receipts_amount'] > 1200).astype(int)
+
+    # Kevin's insights
+    df['is_optimal_miles_per_day_kevin'] = ((df['miles_per_day'] >= 180) & (df['miles_per_day'] <= 220)).astype(int)
     
-    print(f"📂 Loading cases from: {cases_file}")
+    def optimal_daily_spending(row):
+        if row['is_short_trip']:
+            return 1 if row['receipts_per_day'] < 75 else 0
+        elif row['is_medium_trip']:
+            return 1 if row['receipts_per_day'] < 120 else 0
+        elif row['is_long_trip'] or row['is_very_long_trip']: 
+            return 1 if row['receipts_per_day'] < 90 else 0
+        return 0 
+    df['is_optimal_daily_spending_kevin'] = df.apply(optimal_daily_spending, axis=1).astype(int)
+
+    # Interaction features
+    df['duration_x_miles_per_day'] = df['trip_duration_days'] * df['miles_per_day']
+    df['receipts_per_day_x_duration'] = df['receipts_per_day'] * df['trip_duration_days']
     
-    try:
-        with open(cases_file, 'r') as f:
-            cases = json.load(f)
-        print(f"✅ Loaded {len(cases)} test cases")
-    except FileNotFoundError:
-        print(f"❌ Error: {cases_file} not found!")
-        return False
-    except json.JSONDecodeError as e:
-        print(f"❌ Error parsing JSON: {e}")
-        return False
+    df['interaction_kevin_sweet_spot'] = (df['is_5_day_trip'] & \
+                                         (df['miles_per_day'] >= 180) & \
+                                         (df['receipts_per_day'] < 100)).astype(int)
     
-    # Load model and scalers once (much faster than loading per case)
-    model, scaler_X, scaler_y = load_best_model()
+    df['interaction_kevin_vacation_penalty'] = (df['is_very_long_trip'] & \
+                                               (df['receipts_per_day'] > 90)).astype(int)
+
+    df['interaction_efficiency_metric'] = df['miles_traveled'] / (df['trip_duration_days_safe']**0.5 + 1e-6) 
+    df['interaction_spending_mileage_ratio'] = df['total_receipts_amount'] / (df['miles_traveled'] + 1e-6)
+
+    # Select final features (31 total)
+    business_features = [
+        'trip_duration_days', 'miles_traveled', 'total_receipts_amount',
+        'miles_per_day', 'receipts_per_day', 
+        'is_receipt_49_or_99_cents',
+        'is_5_day_trip', 'is_short_trip', 'is_medium_trip', 'is_long_trip', 'is_very_long_trip',
+        'trip_duration_sq', 'miles_traveled_sq', 'total_receipts_amount_sq', 'miles_per_day_sq', 'receipts_per_day_sq',
+        'miles_first_100', 'miles_after_100', 'is_high_mileage_trip',
+        'is_very_low_receipts_multiday', 'is_moderate_receipts', 'is_high_receipts', 'is_very_high_receipts',
+        'is_optimal_miles_per_day_kevin', 'is_optimal_daily_spending_kevin',
+        'duration_x_miles_per_day', 'receipts_per_day_x_duration',
+        'interaction_kevin_sweet_spot', 'interaction_kevin_vacation_penalty',
+        'interaction_efficiency_metric', 'interaction_spending_mileage_ratio'
+    ]
     
-    print(f"📊 Processing {len(cases)} test cases and generating results...")
-    print(f"📝 Output will be saved to {results_file}")
-    print()
+    return df[business_features]
+
+def analyze_private_patterns(X_features):
+    """Analyze business patterns in the private dataset"""
+    print("\n🔍 PRIVATE DATASET BUSINESS PATTERN ANALYSIS:")
     
-    start_time = time.time()
+    # Kevin's patterns
+    sweet_spots = (X_features['interaction_kevin_sweet_spot'] == 1).sum()
+    vacation_penalties = (X_features['interaction_kevin_vacation_penalty'] == 1).sum()
+    optimal_miles = (X_features['is_optimal_miles_per_day_kevin'] == 1).sum()
+    optimal_spending = (X_features['is_optimal_daily_spending_kevin'] == 1).sum()
+    lucky_cents = (X_features['is_receipt_49_or_99_cents'] == 1).sum()
     
-    # Process each case individually (like generate_results.sh but in Python)
-    results = []
+    total = len(X_features)
     
-    with open(results_file, 'w') as f:
-        for i, case in enumerate(cases):
-            if i % 1000 == 0 and i > 0:
-                elapsed = time.time() - start_time
-                rate = i / elapsed
-                eta = (len(cases) - i) / rate
-                print(f"Progress: {i}/{len(cases)} cases processed ({rate:.1f} cases/sec, ETA: {eta:.1f}s)...")
-            
-            # Extract case data (handles flat format from private_cases.json)
-            trip_duration = case['trip_duration_days']
-            miles_traveled = case['miles_traveled']
-            receipts_amount = case['total_receipts_amount']
-            
-            try:
-                # Make prediction for this single case
-                prediction = predict_single_case(trip_duration, miles_traveled, receipts_amount, 
-                                               model, scaler_X, scaler_y)
-                
-                # Format to 2 decimal places (matching our run.sh output)
-                formatted_result = f"{prediction:.2f}"
-                f.write(formatted_result + "\n")
-                results.append(prediction)
-                
-            except Exception as e:
-                print(f"Error on case {i+1}: {e}")
-                f.write("ERROR\n")
-                results.append(None)
+    print(f"   🎯 Kevin's Sweet Spot trips: {sweet_spots} ({sweet_spots/total*100:.1f}%)")
+    print(f"   ⚠️  Vacation Penalty trips: {vacation_penalties} ({vacation_penalties/total*100:.1f}%)")
+    print(f"   🛣️  Optimal mileage (180-220/day): {optimal_miles} ({optimal_miles/total*100:.1f}%)")
+    print(f"   💰 Optimal spending patterns: {optimal_spending} ({optimal_spending/total*100:.1f}%)")
+    print(f"   🍀 Lucky cents (49/99): {lucky_cents} ({lucky_cents/total*100:.1f}%)")
     
-    end_time = time.time()
-    total_time = end_time - start_time
-    avg_time = total_time / len(cases)
+    # Trip distribution
+    trip_dist = {
+        'Short (<4 days)': (X_features['is_short_trip'] == 1).sum(),
+        'Medium (4-6 days)': (X_features['is_medium_trip'] == 1).sum(), 
+        'Long (7 days)': (X_features['is_long_trip'] == 1).sum(),
+        'Very Long (8+ days)': (X_features['is_very_long_trip'] == 1).sum()
+    }
     
-    print(f"\n✅ Results generated successfully!")
-    print(f"📄 Output saved to {results_file}")
-    print(f"⏱️ Total time: {total_time:.2f} seconds")
-    print(f"⏱️ Average per case: {avg_time:.4f} seconds ({1/avg_time:.1f} cases/sec)")
-    print(f"🚀 Speedup vs generate_results.sh: ~{1.5/avg_time:.0f}x faster")
-    print(f"📊 Each line contains the result for the corresponding test case in {cases_file}")
-    
-    print(f"\n🎯 File format:")
-    print(f"  Line 1: Result for private_cases.json[0]")
-    print(f"  Line 2: Result for private_cases.json[1]")
-    print(f"  Line 3: Result for private_cases.json[2]")
-    print(f"  ...")
-    print(f"  Line {len(cases)}: Result for private_cases.json[{len(cases)-1}]")
-    
-    # Show sample results
-    print(f"\n🔍 Sample Results:")
-    for i in range(min(5, len(cases))):
-        case = cases[i]
-        result = results[i] if results[i] is not None else "ERROR"
-        print(f"   Case {i+1}: {case['trip_duration_days']} days, {case['miles_traveled']} miles, "
-              f"${case['total_receipts_amount']:.2f} → {result}")
-    
-    return True
+    print(f"\n   📅 Trip Duration Distribution:")
+    for trip_type, count in trip_dist.items():
+        print(f"      {trip_type}: {count} ({count/total*100:.1f}%)")
 
 def main():
-    """Main function"""
+    print("🏆 TabPFN Business Rules Champion - Private Results Generation")
+    print("="*80)
+    print("Training once on public cases, then batch-processing private cases")
+    print("Expected: World Record quality predictions for submission!")
+    print()
     
     try:
-        success = generate_private_results()
-        if success:
-            print(f"\n🎉 Private results generated successfully!")
-            print(f"📋 Ready for submission: private_results.txt")
-        else:
-            print(f"❌ Failed to generate results!")
-            sys.exit(1)
-            
-    except Exception as e:
-        print(f"❌ Error: {e}")
-        sys.exit(1)
+        from tabpfn import TabPFNRegressor
+    except ImportError:
+        print("❌ TabPFN not available. Please install: pip install tabpfn")
+        return
+    
+    # Load training data (public cases)
+    start_time = time.time()
+    public_df = load_public_cases()
+    
+    # Engineer training features
+    print(f"\n{'='*80}")
+    print(f"🏢 TRAINING ON PUBLIC CASES")
+    print(f"{'='*80}")
+    
+    X_train = engineer_business_features(public_df)
+    y_train = public_df['reimbursement'].values
+    
+    print(f"\n✨ CHAMPION TRAINING SET:")
+    print(f"   🏆 Features: {X_train.shape[1]}")
+    print(f"   📊 Training samples: {len(X_train)}")
+    
+    # Train TabPFN
+    print(f"\n🚀 Training TabPFN Champion...")
+    print(f"   📊 Training on {len(X_train)} public cases")
+    print(f"   🏢 Using {X_train.shape[1]} business-engineered features")
+    
+    tabpfn = TabPFNRegressor(device='cpu')
+    
+    train_start = time.time()
+    X_train_np = X_train.values.astype(np.float32)
+    y_train_np = y_train.astype(np.float32)
+    
+    tabpfn.fit(X_train_np, y_train_np)
+    train_time = time.time() - train_start
+    
+    print(f"   ✅ Training completed in {train_time:.2f} seconds")
+    
+    # Load and process private cases
+    print(f"\n{'='*80}")
+    print(f"🔒 PROCESSING PRIVATE CASES")
+    print(f"{'='*80}")
+    
+    private_df = load_private_cases()
+    X_private = engineer_business_features(private_df)
+    
+    print(f"\n✨ PRIVATE DATASET PREPARED:")
+    print(f"   🔒 Cases to predict: {len(X_private)}")
+    print(f"   🏢 Features: {X_private.shape[1]} (same as training)")
+    
+    # Analyze private patterns
+    analyze_private_patterns(X_private)
+    
+    # Batch prediction
+    print(f"\n{'='*80}")
+    print(f"🔮 BATCH PREDICTION")
+    print(f"{'='*80}")
+    
+    print(f"🚀 Generating predictions for all {len(X_private)} private cases...")
+    pred_start = time.time()
+    
+    X_private_np = X_private.values.astype(np.float32)
+    y_pred = tabpfn.predict(X_private_np)
+    
+    pred_time = time.time() - pred_start
+    total_time = time.time() - start_time
+    
+    print(f"   ✅ Batch prediction completed in {pred_time:.2f} seconds")
+    print(f"   ⚡ Total runtime: {total_time:.2f} seconds")
+    print(f"   🎯 Speed: {len(X_private)/pred_time:.1f} predictions/second")
+    
+    # Save results to private_results.txt
+    print(f"\n{'='*80}")
+    print(f"💾 SAVING RESULTS")
+    print(f"{'='*80}")
+    
+    with open('private_results.txt', 'w') as f:
+        for prediction in y_pred:
+            f.write(f"{prediction:.2f}\n")
+    
+    print(f"✅ Results saved to private_results.txt")
+    print(f"📊 Format: One prediction per line ({len(y_pred)} lines total)")
+    print(f"🎯 Each line corresponds to same-numbered case in private_cases.json")
+    
+    # Analysis summary
+    min_pred = y_pred.min()
+    max_pred = y_pred.max()
+    mean_pred = y_pred.mean()
+    std_pred = y_pred.std()
+    
+    print(f"\n{'='*80}")
+    print(f"📈 PREDICTION SUMMARY")
+    print(f"{'='*80}")
+    
+    print(f"📊 Prediction Statistics:")
+    print(f"   Minimum: ${min_pred:.2f}")
+    print(f"   Maximum: ${max_pred:.2f}")
+    print(f"   Mean: ${mean_pred:.2f}")
+    print(f"   Std Dev: ${std_pred:.2f}")
+    
+    # Sample predictions
+    print(f"\n📋 Sample Predictions (first 5 cases):")
+    for i in range(min(5, len(y_pred))):
+        row = private_df.iloc[i]
+        print(f"   Case {i+1}: {row['trip_duration_days']} days, {row['miles_traveled']} miles, ${row['total_receipts_amount']:.2f} → ${y_pred[i]:.2f}")
+    
+    print(f"\n🎉 SUBMISSION READY!")
+    print(f"   📄 File: private_results.txt")
+    print(f"   📊 Lines: {len(y_pred)}")
+    print(f"   🏆 Model: TabPFN Business Rules Champion")
+    print(f"   ⚡ Processing: {len(X_private)/pred_time:.1f} predictions/second")
+    print(f"   🎯 Expected Quality: World Record level (based on $43.94 MAE public performance)")
 
 if __name__ == "__main__":
     main() 

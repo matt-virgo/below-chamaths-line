@@ -1,0 +1,9 @@
+model,mae,type,notes
+TabPFN V1 (Current Champion),55.959349950000004,Foundation Model,Single TabPFN with V1 engineered features
+Tabpfn Weighted Ensemble,58.00909694310079,Hybrid Ensemble,"TabPFN-weighted ensemble (50% TabPFN, 50% others)"
+Simple Average Ensemble,62.27935929949627,Hybrid Ensemble,Simple average of all models
+Median Ensemble Ensemble,63.69713344847733,Hybrid Ensemble,Median of all model predictions
+Xgboost,64.3584628479004,Tree Ensemble,Individual xgboost model
+Tree Ensemble Ensemble,66.96613755266173,Hybrid Ensemble,Average of tree-based models only
+Gradient Boosting,67.20539889899733,Tree Ensemble,Individual gradient boosting model
+Random Forest,74.37717219088117,Tree Ensemble,Individual random forest model

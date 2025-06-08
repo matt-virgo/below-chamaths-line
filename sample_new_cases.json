@@ -1,0 +1,27 @@
+[
+  {
+    "trip_duration_days": 5,
+    "miles_traveled": 900,
+    "total_receipts_amount": 450.49
+  },
+  {
+    "trip_duration_days": 3,
+    "miles_traveled": 250,
+    "total_receipts_amount": 180.99
+  },
+  {
+    "trip_duration_days": 10,
+    "miles_traveled": 1200,
+    "total_receipts_amount": 950.00
+  },
+  {
+    "trip_duration_days": 7,
+    "miles_traveled": 600,
+    "total_receipts_amount": 420.00
+  },
+  {
+    "trip_duration_days": 1,
+    "miles_traveled": 150,
+    "total_receipts_amount": 75.00
+  }
+] 

@@ -1,0 +1,8 @@
+model,mae,rmse,r2,features,notes
+TabPFN Business Rules (31 features),55.20505354614259,69.76985420636078,0.9801312310404164,31,Business-focused feature engineering with employee interview insights (Kevin's domain expertise)
+TabPFN + Advanced Programmer V2 (Current Record),55.63,N/A,N/A,Various,Previous result for comparison
+TabPFN Ultra Features (100+),55.96,N/A,N/A,Various,Previous result for comparison
+TabPFN V1 Features,55.96,N/A,N/A,Various,Previous result for comparison
+TabPFN MEGA Features (176),57.11,N/A,N/A,Various,Previous result for comparison
+V1 Neural Networks,57.35,N/A,N/A,Various,Previous result for comparison
+V4 Neural Networks,59.76,N/A,N/A,Various,Previous result for comparison

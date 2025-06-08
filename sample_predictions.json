@@ -1,0 +1,57 @@
+[
+  {
+    "trip_duration_days": 5.0,
+    "miles_traveled": 900.0,
+    "total_receipts_amount": 450.49,
+    "predicted_reimbursement": 849.515869140625,
+    "miles_per_day": 180.0,
+    "receipts_per_day": 90.098,
+    "kevin_sweet_spot": true,
+    "optimal_spending": true,
+    "trip_category": "Medium (4-6 days)"
+  },
+  {
+    "trip_duration_days": 3.0,
+    "miles_traveled": 250.0,
+    "total_receipts_amount": 180.99,
+    "predicted_reimbursement": 423.8028564453125,
+    "miles_per_day": 83.33333333333333,
+    "receipts_per_day": 60.330000000000005,
+    "kevin_sweet_spot": false,
+    "optimal_spending": true,
+    "trip_category": "Short (<4 days)"
+  },
+  {
+    "trip_duration_days": 10.0,
+    "miles_traveled": 1200.0,
+    "total_receipts_amount": 950.0,
+    "predicted_reimbursement": 2024.8447265625,
+    "miles_per_day": 120.0,
+    "receipts_per_day": 95.0,
+    "kevin_sweet_spot": false,
+    "optimal_spending": false,
+    "trip_category": "Very Long (8+ days)"
+  },
+  {
+    "trip_duration_days": 7.0,
+    "miles_traveled": 600.0,
+    "total_receipts_amount": 420.0,
+    "predicted_reimbursement": 1000.37451171875,
+    "miles_per_day": 85.71428571428571,
+    "receipts_per_day": 60.0,
+    "kevin_sweet_spot": false,
+    "optimal_spending": true,
+    "trip_category": "Long (7 days)"
+  },
+  {
+    "trip_duration_days": 1.0,
+    "miles_traveled": 150.0,
+    "total_receipts_amount": 75.0,
+    "predicted_reimbursement": 197.90806579589844,
+    "miles_per_day": 150.0,
+    "receipts_per_day": 75.0,
+    "kevin_sweet_spot": false,
+    "optimal_spending": false,
+    "trip_category": "Short (<4 days)"
+  }
+]
